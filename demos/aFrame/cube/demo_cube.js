@@ -173,7 +173,10 @@ function main(){
         //move and rotate the cube:
         THREEFACEOBJ3D.position.set(x,y+SETTINGS.pivotOffsetYZ[0],z+SETTINGS.pivotOffsetYZ[1]);
         THREEFACEOBJ3D.rotation.set(detectState.rx+SETTINGS.rotationOffsetX, detectState.ry, detectState.rz, "XYZ");
-      }
+        THREEFACEOBJ3D.visible = true;
+          } else {
+            THREEFACEOBJ3D.visible = false;
+        }
 
       // reinitialize the state of THREE.JS because JEEFACEFILTER have changed stuffs:
       THREERENDERER.state.reset();
